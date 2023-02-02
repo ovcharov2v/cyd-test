@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Remove form error
 	const checkFormForError = () => {
 		const errorQuestionList = surveyForm.querySelectorAll('.question-list__elem--error')
-		console.log(errorQuestionList.length)
 		if(!errorQuestionList.length) {
 			surveyForm.classList.remove('survey__form--has-error')
 			submitBtn.disabled = false
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.preventDefault()
 		const firstError = surveyForm.querySelector('.question-list__elem--error')
 		if(firstError) {
-			console.log(firstError.getBoundingClientRect().top + window.scrollY)
 			window.scroll({
 				top: firstError.getBoundingClientRect().top + window.scrollY,
 				behavior: 'smooth'
