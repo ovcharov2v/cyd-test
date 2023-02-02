@@ -1,0 +1,37 @@
+.subscribe {
+	padding-top: 52px;
+	padding-bottom: 56px;
+	text-align: center;
+
+	&__subtitle { // .subscribe__subtitle
+		margin-bottom: 8px;
+		font-size: 23px;
+		line-height: 32px;
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #e5b120;
+	}
+
+	&__title { // .subscribe__title
+		margin-bottom: 23px;
+	}
+
+	&__text { // .subscribe__text
+		margin-bottom: 41px;
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: 0.055em;
+		color: #4d4d4d;
+	}
+
+	&__form { // .subscribe__form
+		display: grid;
+		grid-template-columns: repeat(2, 1fr) 155px;
+		grid-template-rows: auto;
+		grid-column-gap: 20px;
+		width: 100%;
+		max-width: 908px;
+		margin: 0 auto;
+	}
+}

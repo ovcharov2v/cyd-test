@@ -1,5 +1,3 @@
-include mixins
-
 block vars
 	-
 		var baseDir = './'
@@ -279,15 +277,10 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
-		block body-start
-		block content
+		include components/header
+		main
+			block content
+		include components/footer
 		block scripts
-			script.
-				if (!('IntersectionObserver' in window)) {
-					var script = document.createElement("script");
-					script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
-					document.getElementsByTagName('head')[0].appendChild(script);
-				}
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
-		block body-end

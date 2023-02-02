@@ -1,6 +1,44 @@
+// Footer
 footer.footer
-	.footer__copyright
-		span(data-actual-year)
+	.container.footer__top
+		a.footer__logo-box(href="/", title="Back to Home")
+			img.footer__logo-img(src="images/truity_logo.png", alt="Truity logo")
+		ul.footer__social-list
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://facebook.com", title="Facebook", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-facebook
+					span.hover-block__active.sprite-icon-facebook-active
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://twitter.com", title="Twitter", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-twitter
+					span.hover-block__active.sprite-icon-twitter-active
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://plus.google.com/", title="Google+", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-googleplus
+					span.hover-block__active.sprite-icon-googleplus-active
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://youtube.com", title="YouTube", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-youtube
+					span.hover-block__active.sprite-icon-youtube-active
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://linkedin.com", title="LinkedIn", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-linkedin
+					span.hover-block__active.sprite-icon-linkedin-active
+			li.footer__social-elem.hover-block
+				a.footer__social-link(href="https://pinterest.com", title="Pinterest", target="_blank", rel="noreferrer")
+					span.hover-block__normal.sprite-icon-pinterest
+					span.hover-block__active.sprite-icon-pinterest-active
+		ul.footer__nav-list
+			li.footer__nav-elem
+				a.footer__nav-link(href="/") Home
+			li.footer__nav-elem
+				a.footer__nav-link(href="/") How it Works
+			li.footer__nav-elem
+				a.footer__nav-link(href="/") Pricing
+			li.footer__nav-elem
+				a.footer__nav-link(href="/") Resources
+			li.footer__nav-elem
+				a.footer__nav-link(href="/") Take the Test
+	.container.footer__copyright
+		p Copyright © 2015, TRUITY. All rights reserved.
 
-	.footer__developer
-		| &copy;&nbsp;Девять линий

@@ -1,0 +1,15 @@
+.input {
+	padding: 16px 24px;
+	border-width: 0;
+	background-color: #f1f1f1;
+	color: $color-black;
+	letter-spacing: 0.13em;
+
+	&::placeholder {
+		color: #737373;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
