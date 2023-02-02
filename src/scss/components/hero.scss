@@ -28,6 +28,13 @@
 		}
 	}
 
+	&__title-reg { // .hero__title-reg
+		display: inline-block;
+		font-size: 34px;
+		line-height: 40px;
+		transform: translate(6px, -7px)
+	}
+
 	&__text-list { // .hero__text-list
 		padding-left: 3px;
 	}
