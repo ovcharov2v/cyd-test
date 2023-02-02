@@ -53,7 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		e.preventDefault()
 		const firstError = surveyForm.querySelector('.question-list__elem--error')
 		if(firstError) {
-			firstError.scrollIntoView({
+			console.log(firstError.getBoundingClientRect().top + window.scrollY)
+			window.scroll({
+				top: firstError.getBoundingClientRect().top + window.scrollY,
 				behavior: 'smooth'
 			})
 		}
