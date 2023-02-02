@@ -2,10 +2,16 @@
 	"name": "ninelines-template",
 	"version": "3.0.4",
 	"description": "Шаблон для разработки сайтов",
-	"repository": "ninelines-team/ninelines-template",
+	"repository": "https://github.com/ovcharov2v/cyd-test",
 	"author": "Ninelines Agency <info@ninelines.agency>",
 	"license": "ISC",
 	"private": true,
+	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build",
+		"start": "gulp",
+		"build": "gulp build"
+	},
 	"devDependencies": {
 		"@babel/cli": "7.14.8",
 		"@babel/core": "7.14.8",
@@ -18,6 +24,7 @@
 		"cssnano": "5.0.7",
 		"del": "6.0.0",
 		"emitty": "1.4.0",
+		"gh-pages": "5.0.0",
 		"gulp": "4.0.2",
 		"gulp-append-prepend": "1.0.9",
 		"gulp-debug": "4.0.0",
