@@ -145,7 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     var firstError = surveyForm.querySelector('.question-list__elem--error');
     if (firstError) {
-      firstError.scrollIntoView({
+      console.log(firstError.getBoundingClientRect().top + window.scrollY);
+      window.scroll({
+        top: firstError.getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
       });
     }
