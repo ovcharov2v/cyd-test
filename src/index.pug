@@ -7,13 +7,97 @@ append vars
 	//-
 
 block content
-	//- include pug/data
+	// Section Hero
+	section.hero
+		.container
+			.hero__content
+				h1.h1.hero__title The TypeFinder
+					sup.hero__title-reg ®
+					br
+					| Research Edition
+				ul.hero__text-list
+					li.hero__text
+						span.hero__text-icon.sprite-test-price-big
+						| Price: Free!
+					li.hero__text
+						span.hero__text-icon.sprite-test-time-big
+						| Time to Take: 20 Minutes
 
-	//- .site
-	//- 	include pug/components/header
+	// Section Survey
+	section.survey
+		.survey__about
+			.container.survey__about-container
+				a(href="/").survey__about-link About this tests
+					span.sprite-test-arrow.survey__about-icon
+		.container.survey__content
+			.survey__progress-box
+				p.survey__current
+					span.survey__current-icon.sprite-test-questions
+					| Questions: 5 / 52
+				.survey__progress.progress
+					.progress__section-list
+						p.progress__section
+							span.progress__section-number Section One
+							|
+							| 12 Questions
+						p.progress__section
+							span.progress__section-number Section Two
+							|
+							| 32 Questions
+						p.progress__section
+							span.progress__section-number Section Three
+							|
+							| 32 Questions
+						p.progress__section.progress__section--short
+							span.progress__section-number 4
+					.progress__track
+						.progress__value
+			form.survey__form(action="/")
+				.question-list.survey__question-list
+					.question-list__header
+						h2.question-list__title From each pair, choose the word that describes yuo best.
+					-
+						const titleList = [
+							['I seek attention from others', 'I avoid attention from others'],
+							['I like to try to innovate', 'I like to use trusted methods'],
+							['I put my needs first', 'I put others\' needs ahead of my own'],
+							['I am often disorganized', ' I keep myself organized'],
+							['I value my social status', 'I value my privacy'],
+							['I trust traditional values', 'I question traditional values'],
+							['I make sure everyone is taken care of', 'I look out for myself'],
+							['I am always prepared', 'I am often unprepared'],
+							['I choose my friends carefully', 'I make new friend quickly'],
+							['I focus on real life', 'I use my imagination'],
+							['I feel the pain of other people', 'I am not easily affected by sad stories'],
+							['I follow a plan', 'I act on impulse'],
+						]
+					each titlePair, index in titleList
+						// Question
+						.question-list__elem.question
+							p.question__title.question__title--left= titlePair[0]
+							- var n=1
+							while (n <= 5)
+								.question__input-box
+									input.question__input(type="radio", name="q" + (index + 1), id="q" + (index + 1) + "-" + n, value=n)
+									label.question__label(for="q" + (index + 1) + "-" + n)
+								- n++
+							p.question__title.question__title--right= titlePair[1]
+				.survey__submit-box
+					p.survey__error-message You haven't answered some questions, please
+						|
+						|
+						a.survey__error-scroll(href="#") come back
+						|
+						|
+						| to them
+					button.button.survey__submit-btn(type="submit") Next page
 
-	//- 	include pug/pages/home
-
-	//- 	include pug/components/footer
-
-	//- include pug/components/analytics
+	// Section Subscribe
+	section.subscribe.container
+		p.subscribe__subtitle Truity up to date
+		h2.h2.subscribe__title Subscribe to Newsletter
+		p.subscribe__text Subscribe to our newsletter to receive updates when we post new blogs and other content.
+		form.subscribe__form(action="/")
+			input.input(type="email", placeholder="Your email address", required)
+			input.input(type="name", placeholder="Your name", required)
+			button.button(type="submit") Sign Up!

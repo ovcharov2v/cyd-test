@@ -1,20 +1,16 @@
-// stylelint-disable scss/dollar-variable-empty-line-before
-
-// COLORS
-$color-black: #000;
+// Colors
+$color-transparent: rgba(#000, 0);
+$color-black: #3d3d3d;
 $color-white: #fff;
-$color-gray: #eee;
+$color-yellow: #e4af1a;
+$color-gray: #727272;
 
-// FONTS
-// stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+// Fonts
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Playfair Display', serif;
 
-// EASING TRANSITIONS
-$duration-normal: 0.4s;
-$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
-$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
-$easing-out: ease-out;
-$easing-in: ease-in;
+// Animations
+$trasition-default: 0.2s ease;
 
 // Settings
 $desktop: 1025;

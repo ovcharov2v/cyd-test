@@ -1,0 +1,109 @@
+.survey {
+	position: relative;
+	z-index: 1;
+	background-color: #f4f4f4;
+	padding-bottom: 46px;
+
+	&::after {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 9px);
+		width: 0;
+		height: 0;
+		border-width: 10px 10px 0 10px;
+		border-color: #f4f4f4 transparent transparent transparent;
+		border-style: solid;
+		content: "";
+	}
+
+	&__about { // .survey__about
+		padding-top: 34px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid #d8d8d8;
+	}
+
+	&__about-container { // .survey__about-container
+		text-align: center;
+	}
+
+	&__about-link { // .survey__about-link
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		letter-spacing: 0.18em;
+		color: $color-yellow;
+		text-transform: uppercase;
+	}
+
+	&__about-icon { // .survey__about-icon
+		margin-left: 10px;
+	}
+
+	&__content { // .survey__content
+		padding-top: 27px;
+	}
+
+	&__progress-box { // .survey__progress-box
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 18px;
+	}
+
+	&__current { // .survey__current
+		display: flex;
+		align-items: center;
+		margin-left: 3px;
+		margin-right: 72px;
+		font-size: 17px;
+		line-height: 22px;
+		letter-spacing: 0.04em;
+		color: $color-gray;
+	}
+
+	&__current-icon { // .survey__current-icon
+		margin-right: 12px;
+	}
+
+	&__progress { // .survey__progress
+		flex-grow: 1;
+		margin-bottom: 6px;
+	}
+
+	&__question-list { // .survey__question-list
+		margin-bottom: 34px;
+	}
+
+	&__submit-box { // .survey__submit-box
+		text-align: center;
+	}
+
+	&__error-message { // .survey__error-message
+		display: none;
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #e61010;
+
+		.survey__form--has-error & {
+			display: block;
+		}
+	}
+
+	&__error-scroll { // .survey__error-scroll
+		text-decoration: underline;
+		transition: color $trasition-default;
+
+		&:hover {
+			color: $color-black;
+		}
+	}
+
+	&__submit-btn { // .survey__submit-btn
+		width: 100%;
+		max-width: 224px;
+	}
+}

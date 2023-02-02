@@ -1,0 +1,59 @@
+.hero {
+	padding-top: 56px;
+	padding-bottom: 52px;
+	background-color: #922890;
+	background-image: url("../images/truityasset-test-banner-wide.png");
+	background-size: auto 100%;
+	background-position: center right;
+	background-repeat: no-repeat;
+	color: $color-white;
+
+	&__content { // .hero__content
+	}
+
+	&__title { // .hero__title
+		position: relative;
+		margin-bottom: 24px;
+		padding-bottom: 27px;
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 3px;
+			width: 100%;
+			max-width: 79px;
+			height: 2px;
+			background-color: $color-white;
+			content: "";
+		}
+	}
+
+	&__title-reg { // .hero__title-reg
+		display: inline-block;
+		font-size: 34px;
+		line-height: 40px;
+		transform: translate(6px, -7px)
+	}
+
+	&__text-list { // .hero__text-list
+		padding-left: 3px;
+	}
+
+	&__text { // .hero__text
+		display: flex;
+		align-items: center;
+		font-size: 15px;
+		line-height: 22px;
+		letter-spacing: 0.2em;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__text-icon { // .hero__text-icon
+		margin-right: 10px;
+	}
+}

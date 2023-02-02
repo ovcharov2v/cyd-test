@@ -1,0 +1,62 @@
+.question {
+	display: grid;
+	grid-template-columns: 1fr repeat(5, 30px) 1fr;
+	grid-template-rows: auto;
+	align-items: center;
+	grid-column-gap: 35px;
+	padding: 25px 15px 22px;
+
+	&__title { // .question__title
+		letter-spacing: 0.04em;
+
+		&--left { // .question__title--left
+			text-align: right;
+		}
+	}
+
+	&__input-box { // .question__input-box
+		transform: translate(3px, -1px);
+	}
+
+	&__input { // .question__input
+		display: none;
+	}
+
+	&__label { // .question__label
+		position: relative;
+		cursor: pointer;
+
+		&::before {
+			@include sprite("test-checkbox-off");
+			transition: opacity $trasition-default;
+			content: "";
+		}
+
+		&::after {
+			@include sprite("test-checkbox-on");
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) translateY(1px);
+			opacity: 0;
+			transition: opacity $trasition-default;
+			content: "";
+		}
+
+		.question__input:checked + & {
+			&::before {
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		.question__input:not(:checked) + &:hover {
+			&::after {
+				opacity: 0.3;
+			}
+		}
+	}
+}

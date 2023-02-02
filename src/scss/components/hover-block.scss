@@ -1,0 +1,24 @@
+.hover-block {
+	position: relative;
+
+	&__normal { // .hover-block__normal
+		transition: opacity $trasition-default;
+
+		.hover-block:hover & {
+			opacity: 0;
+		}
+	}
+
+	&__active { // .hover-block__active
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: opacity $trasition-default;
+
+		.hover-block:hover & {
+			opacity: 1;
+		}
+	}
+}
