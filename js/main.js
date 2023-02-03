@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // Remove form error
   var checkFormForError = function checkFormForError() {
     var errorQuestionList = surveyForm.querySelectorAll('.question-list__elem--error');
-    console.log(errorQuestionList.length);
     if (!errorQuestionList.length) {
       surveyForm.classList.remove('survey__form--has-error');
       submitBtn.disabled = false;
@@ -145,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     var firstError = surveyForm.querySelector('.question-list__elem--error');
     if (firstError) {
-      console.log(firstError.getBoundingClientRect().top + window.scrollY);
       window.scroll({
         top: firstError.getBoundingClientRect().top + window.scrollY,
         behavior: 'smooth'
